@@ -1,0 +1,162 @@
+# YAML
+# make sure this doc complies with yaml standards or you will get errors!
+# http://en.wikipedia.org/wiki/YAML
+# GERMAN VERSION
+
+
+instructions_1: >
+    Der erste Teil des Experiments besteht aus der oben beschriebenen
+    Entscheidungssituation und wird in 10 Perioden, wiederholt
+    durchgeführt. Sie erhalten am Ende des Experiments ein
+    Einkommen, deren Höhe von Ihren Entscheidungen abhängt.
+
+    
+instructions_2: >
+    Jede Person hat in jeder Periode 20 Punkte zur Verfügung.
+    Sie müssen sich entscheiden, wie viele der 20 Punkte Sie
+    zum Projekt beitragen. Gleichzeitig legen Sie in jeder
+    Periode fest, wie viele Punkte sie für sich behalten,
+    nämlich 20 minus Ihre Beitrag in das Projekt.
+
+    
+instructions_3: >
+    Zur Erinnerung:
+    
+    Ihr Einkommen in jeder Periode beträgt:
+    
+    20 – Ihr Beitrag zum Gemeinschaftsprojekt
+    
+    +
+    
+    0,60 x Summe der Beiträge aller Gruppenmitglieder zum Gemeinschaftsprojekt
+
+    
+instructions_4: >
+    Wir zeigen Ihnen nun die Eingabemaske mit der Sie später
+    Ihren Beitrag zum Projekt wählen können. Sie können Ihren
+    Beitrag solange ändern, bis Sie die Weiter-Taste gedrückt
+    haben. Dann können Sie Ihre Entscheidung nicht mehr
+    revidieren.
+
+    
+instructions_5: >
+    Am Ende jeder Periode erhalten Sie eine Übersicht über die
+    Beiträge und die Einkommen jeder Person in dieser Periode.
+    
+    
+    Wenn Sie die Weiter-Taste drücken, startet die nächste
+    Periode. Nach spätestens 30 Sekunden startet die nächste
+    Periode automatisch.
+
+    
+summary_1: >
+    Hier sehen Sie ein Beispiel der Übersicht.
+    Wir werden Ihnen nun Schritt für Schritt die einzelnen
+    Komponenten erklären.
+
+    
+summary_2: >
+    In der linken Spalte sehen Sie die Beiträge zum Projekt,
+    in der rechten Spalte sehen sie die Einkommen.
+    
+    
+summary_2_reversed: >
+    In der linken Spalte sehen Sie die Einkommen,
+    in der rechten Spalte sehen sie die Beiträge zum Projekt.
+
+
+summary_3: >
+    In der mittleren Spalte finden Sie jeweils die Angaben
+    ob die Beiträge und Einkommen Sie oder die andere Person
+    (Person B) betreffen. Darunter sind die Summe und der
+    Durschnitt der Beiträge und Einkommen angegeben.
+
+
+summary_4: >
+    Hier nun ein konkretes Beispiel: Nehmen wir an, Sie haben
+    0 und Person B 10 zum Projekt beigetragen.
+
+    
+summary_5: >
+    Daraus ergibt sich eine Summe der Beiträge zum Projekt von
+    10 (0 + 10) und ein Durschnitt der Beiträge von 5 (10 / 2).
+
+    
+summary_6: >
+    Ihr Einkommen erechnet sich nun aus 20 – der beigetragenen
+    Punkte zum Projekt, 20 - 0 = 20 und 0,60 mal der Summe der Beiträge,
+    0,60 * 10 = 6. Das heisst in dieser Periode bekommen Sie 20 + 6 = 26
+    Punkte auf Ihr Konto gutgeschrieben.
+
+    
+summary_7: >
+    Für Person B ergibt sich folgende Rechnung: 20 – der beigetragenen
+    Punkte zum Projekt, 20-10 = 10 und .60 mal der Summe der Beiträge,
+    .60 * 10 = 6. Das heisst in dieser Periode bekommt Person B 10 + 6 = 16
+    Punkte gutgeschrieben.
+    
+    
+summary_8: >
+    Auf dieser Seite zeigen wir Ihnen die Summe des Einkommens an:
+    26 + 16 = 42 sowie den Durschnitt für jede Person 42/2 = 21.
+
+    
+instructions_6: >
+    Falls Sie noch Fragen haben, wenden Sie sich nun bitte an
+    die Versuchsleiterin! 
+    
+    Anderenfalls klicken Sie auf ,Weiter'
+    und nach einer kurzen Kalibrierung des Eye-Trackers
+    beginnen wir mit dem Experiment.
+
+    
+detect_pupils_screen: >
+    Setzten Sie sich in eine aufrechte Position, in der Sie bequem für die Dauer des Experimentes sitzen können.
+    Bewegen Sie nun Ihren Kopf in eine Position, sodass Ihre Augen in der Mitte des Monitors angezeigt werden.
+    Sobald sich Ihre Augen lange genug im grünen Bereich befinden, wird der 'Weiter' Button aktiviert. 
+    
+    
+calibration_look: >
+    Schauen Sie auf den roten Punkt!
+    
+
+calibration_failed: >
+    Die Kalibrierung des Eye-Trackers war nicht erfolgreich,
+    sie wird nun wiederholt.
+            
+    Klicken Sie auf 'Weiter' sobald Sie bereit sind.
+
+    
+calibration_failed_again: >
+    Die Kalibrierung des Eye-Trackers war nicht erfolgreich.
+    Bitte versuchen Sie auf dem nächsten Schirm nochmals mit
+    Ihren Augen im grünen Bereich zu sein.
+            
+    Klicken Sie auf 'Weiter' sobald Sie bereit sind.
+
+    
+wait: >
+    Bitte warten Sie!
+    
+    
+contrib_screen: >
+    In dieser Periode sind Sie Person A.
+    Sie verfügen über 20 Punkte.
+    Von diesen 20 Punkten werden Sie {} zum Projekt beitragen.
+
+    
+contrib_screen_wait: >
+    Bitte warten Sie bis die andere Person gewählt hat.
+    
+
+payoff_screen: >
+    Herzlichen Glückwunsch, Sie haben {} Punkte erspielt!
+
+    
+final_screen : >
+    Herzlichen Glückwunsch, Sie haben {} € erspielt!
+
+    Bitte wenden Sie sich nun an die Versuchsleiterin!
+
+
+

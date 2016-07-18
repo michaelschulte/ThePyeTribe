@@ -1,0 +1,269 @@
+# YAML
+# make sure this doc complies with yaml standards or you will get errors!
+# http://en.wikipedia.org/wiki/YAML
+# ENGLISH VERSION
+
+# Note to translator: a single line break is rendered as a space,
+# and if there are multiple line breaks in a row, the first is
+# rendered as a space. Don't worry about line breaks,
+# I will fix them if there are any problems.
+
+
+instructions_1: >
+    You are participating in an experiment in which you can earn
+    different amounts of money. The amount you earn depends on the
+    decisions you make. It is therefore very important that you read
+    these instructions carefully.
+    
+    
+    Click 'Weiter' when you are ready.
+
+    
+instructions_2: >
+    The experiment has different sections in which you earn points.
+    After each section you will see how many points you earned.
+    At the end of the experiment, one of these sections will be
+    selected randomly and the points you earned in the selected
+    section will be converted into Euros. The resulting amount
+    will be paid to you in cash.    
+    
+    
+    {} points = 1 Euro
+
+    
+instructions_3: >
+    You will be paired with another participant throughout the experiment.
+    We will refer to the other participant as Person B. Your identity and
+    Person B's will be kept anonymous.
+    
+    
+    In each section, you will go through several rounds making decisions.
+    In each round, you will start with 20 points.
+    In each round, your task is to decide how to divide these points.
+    You must decide how many points you will 
+    contribute to a project and how many points you will keep for yourself.
+
+    
+instructions_4: >
+    In each round, your income is determined by the amount you kept
+    for yourself and the income you received from the project:
+
+    
+    Income from round = points kept + income from project
+
+    
+    Your income from the project depends on your contribution
+    and Person B's contribution. The total amount contributed
+    to the project is multiplied by 1.8 and then distributed
+    evenly between you and Person B.
+    
+    
+    For example, if you contribute 10 points and Person B contributes 
+    10 points, the total amount contributed to the project is 20.
+    This amount is then multiplied by 1.8 resulting in 36 points
+    (almost doubled). These 36 points are then distributed evenly
+    between you and Person B, so each receives 18 points.
+
+    
+    Your income for this round is 28, because you kept 10 points
+    and made 18 points from the project.
+    
+    
+instructions_5: >
+    The income from each round is added to your account, where it is 
+    saved until the end of the section. Each round you start with a
+    new set of 20 points to allocate.
+    
+    
+    See the following visual explanation of how the income is calculated
+    for you and Person B.
+    
+    
+instructions_6: >
+    This formula summarizes how your income is calculated in each round. 
+    Person B read the same instructions as you did, and earns points in the same way.
+    
+    
+control_q_1: >
+    Feel free to ask the experimenter for paper and pencil to do calculations.
+    
+    
+    Imagine that your contribution is 0 and Person B's contribution is also 0.
+    $$
+    How many points do you earn?
+    $$
+    How many points does Person B earn?
+    
+    
+control_q_2: >
+    Feel free to ask the experimenter for paper and pencil to do calculations.
+    
+    
+    Imagine that your contribution is 20 and Person B's contribution is also 20.
+    $$
+    How many points do you earn?
+    $$
+    How many points does Person B earn?
+    
+    
+control_q_3: >
+    Feel free to ask the experimenter for paper and pencil to do calculations.
+    
+    
+    Imagine that your contribution is 10.
+    How many points do you earn if...
+    $$
+    Person B's contribution is 0?
+    $$
+    Person B's contribution is 10?
+    $$
+    Person B's contribution is 20?
+    
+    
+control_q_wrong: >
+    One or more of your answers was incorrect. Please try again.    
+
+    
+summary_0: >
+    Here you see an example of the screen which you will later use to
+    choose your contribution to the project. You can change
+    your contribution until you press the 'Weiter' button.
+
+    
+summary_1: >
+    At the end of each period you will receive a summary of the
+    contributions and payoffs of each person for that period.
+    Here you see an example of the summary screen.
+    
+    
+    When you press the 'Weiter' button, the following round begins.
+    If you do not press 'Weiter, the next round will start after 30 seconds.
+    
+    
+    We will clarify the components of the summary 
+    screen point-by-point.
+
+    
+summary_2: >
+    One column shows the contributions to the project,
+    the other column shows the payoffs.
+
+
+summary_3: >
+    The middle column indicates whether contributions and payoffs
+    are yours or Person B's. Below Person B's information, you will find
+    the sums and averages of contributions and payoffs for the round.
+
+
+summary_4: >
+    Here is a concrete example: Imagine that you have contributed 10 points 
+    and Person B has contributed 10 points to the project.
+
+    
+summary_5: >
+    The sum of the contributions is therefore 20 (10 + 10)
+    and the average is 10 (20 divided by 2).
+
+    
+summary_6: >
+    Your payoff is:
+    
+    
+    
+    
+    
+    You made 28 points in this round.
+
+    
+summary_7: >
+    Person B's payoff is:
+
+    
+    
+    
+    
+    Person B made 28 points in this round.
+    
+    
+summary_8: >
+    On this side we show you the sum of the payoffs:
+    28 + 28 = 56, as well as the average payoff: 56 divided by 2 = 28.
+
+    
+pre_calibration_instructions: >
+    If you have questions, please ask the experimenter!
+    
+    
+    Otherwise, click 'Weiter' and after calibrating the eye tracker,
+    you will begin the experiment.
+
+    
+detect_pupils_screen: >
+    Sit comfortably and move your head into a position where
+    you see your eyes projected in the middle of the screen.
+    Let the 'Weiter' button activate by setting our eyes within
+    the green region for a few seconds. Then press the button.
+    
+    
+calibration_look: >
+    Look at the red dot!
+    
+
+calibration_failed: >
+    The calibration failed. It does not always work the first time. Please try again.
+    
+    
+    Click 'Weiter' when you are ready.
+
+    
+calibration_failed_again: >
+    The calibration failed again.
+    We will make sure your eyes are within the tracker's range.
+
+    
+wait: >
+    Please wait.
+    
+    
+begin_game_screen_initial: >
+    This section of the experiment has {} rounds.
+    
+    
+    Click 'Weiter' to begin the section!
+    
+    
+begin_game_screen_subsequent: >
+    This section is exactly like the first section, except that
+    instead of multiplying contributions by 1.8,
+    they will be multiplied by {}.
+    
+    
+    Click 'Weiter' to begin the section!
+
+    
+contrib_screen: >
+    You will contribute {} points to the project.
+
+    
+contrib_screen_wait: >
+    Please wait until Person B has made a decision.
+    
+
+payoff_screen: >
+    Congratulations, you earned {} points in this section!
+    
+    
+final_screen: >
+    Section {game} was randomly selected. In this section,
+    you earned {points} points. Your total earnings from the experiment,
+    including the show-up fee of 6 €, is {cash} €.
+
+    
+    Thank you for participating.
+
+    
+    Please call the experimenter.
+    
+# Note to translator: leave the stuff in
+# curly braces as it is -- these get filled
+# in automatically during the experiment!

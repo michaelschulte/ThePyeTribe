@@ -1,0 +1,271 @@
+# YAML
+# make sure this doc complies with yaml standards or you will get errors!
+# http://en.wikipedia.org/wiki/YAML
+# GERMAN VERSION
+
+instructions_1: >
+    In diesem Experiment können Sie verschieden hohe Geldbeträge verdienen.
+    Die Menge die Sie bekommen hängt von Ihren Entscheidungen ab. 
+    Deshalb ist es sehr wichtig, dass Sie die Instruktionen aufmerksam lesen.
+    
+    
+    Klicken Sie auf 'Weiter' wenn Sie bereit sind.
+    
+   
+instructions_2: >
+    Das Experiment besteht aus verschiedenen Abschnitten in denen man Geld gewinnen kann.
+    Nach jedem dieser Abschnitte werden Sie sehen wie viele Punkte Sie verdient haben.
+    Am Ende des Experiments wird einer dieser Teilabschnitte zufällig ausgewählt und
+    die Punkte die Sie in diesem verdient haben werden dann in Euro konvertiert.
+    Den Betrag der sich daraus ergibt werden Ihnen anschließend ausgezahlt.
+    
+    
+    {} Punkte = 1 Euro
+    
+    
+instructions_3: >
+    Sie werden das Experiment gleichzeitig mit einem anderen Versuchsteilnehmer durchführen.
+    Dieser wird bezeichnet als Person B.
+    Ihre Identität und die der Person B wird anonym bleiben.
+    
+    
+    In jedem Abschnitt werden Sie mehrere Entscheidungsrunden durchlaufen.
+    In jeder Runde starten Sie mit 20 Punkten. Ihre Aufgabe in jeder Runde ist
+    es zu entscheiden wie Sie die Punkte aufteilen. Sie müssen entscheiden wie
+    viele Punkte Sie zu einem Projekt beisteuern möchten und wie viele Sie für
+    sich behalten.
+    
+
+instructions_4: >
+    In jeder Runde setzt sich Ihr Einkommen aus der Menge der Punkte,
+    die Sie für sich behalten, und dem Einkommen, welches Sie aus dem Projekt erhalten, zusammen.
+    
+    
+    Einkommen der Runde = Behaltene Punkte + Einkommen des Projekts
+    
+    
+    Ihr Einkommen aus dem Projekt hängt sowohl von Ihrem Beitrag als auch
+    vom Beitrag der Person B ab. Die Gesamtzahl der eingesetzten Punkte
+    beider Teilnehmer wird multipliziert mit 1,8 und dann zu gleichen 
+    Anteilen zwischen Ihnen und Person B aufgeteilt.
+    
+    
+    Zum Beispiel: Steuern Sie 10 Punkte bei und Person B auch, ist die
+    Gesamtmenge der eingesetzten Punkte 20. Diese Menge an Punkten
+    mulitpliziert mit 1,8 ergibt 36 Punkte (also fast das Doppelte).
+    Diese 36 Punkte wurden dann in gleichen Anteilen zwischen Ihnen
+    und Person B aufgeteilt. Das heißt jeder von Ihnen bekommt 18 Punkte.
+    
+    
+    Ihr Einkommen für diese Runde ist 28, weil Sie 10 Punkte behalten haben
+    und 18 aus dem Projekt erhalten.
+    
+    
+instructions_5: >
+    Das Einkommen aus jeder Runde wird zu Ihrem Konto hinzugefügt,
+    wo es bis zum Ende des Abschnitts  gespeichert wird. Sie starten
+    jede Runde erneut mit 20 Punkten die Sie verteilen können.
+    
+    
+    Schauen Sie sich die folgende visuelle Erklärung der Zusammensetzung
+    Ihres Einkommens und dem der Person B an.
+    
+    
+instructions_6: >
+    Diese Formel fasst zusammen wie ihr Einkommen in jeder Runde errechnet wird.
+    Person B hat die gleichen Instruktionen gelesen wie Sie und gewinnt die
+    Punkte auf gleiche Weise.
+    
+
+control_q_1: >
+    Zögern Sie nicht den Versuchsleiter nach Papier und Stift zu fragen,
+    falls Sie dies benötigen.
+    
+    
+    Stellen Sie sich vor, Sie steuern 0 Punkte zum Projekt bei und die Person B ebenfalls.
+    $$
+    Wie viele Punkte verdienen Sie?
+    $$
+    Wie viele Punkte verdient Person B?
+    
+    
+control_q_2: >
+    Zögern Sie nicht den Versuchsleiter nach Papier und Stift zu fragen,
+    falls Sie dies benötigen.
+    
+    
+    Stellen Sie sich vor, Sie steuern 20 Punkte zum Projekt bei und die
+    Person B ebenfalls 20.  
+    $$
+    Wie viele Punkte verdienen Sie?
+    $$
+    Wie viele Punkte verdient Person B?
+    
+    
+control_q_3: >
+    Zögern Sie nicht den Versuchsleiter nach Papier und Stift zu fragen,
+    falls Sie dies benötigen.
+    
+    
+    Stellen Sie sich vor, Sie steuern 10 Punkte zum Projekt.
+    Wie viele Punkte verdienen Sie wenn...
+    $$
+    Person B 0 Punkte beisteuert?
+    $$
+    Person B 10 Punkte beisteuert?
+    $$
+    Person B 20 Punkte beisteuert?
+    
+    
+control_q_wrong: >
+    Eine oder mehrere Antworten waren falsch.
+    Bitte Versuchen Sie es erneut!
+
+    
+summary_0: >
+    Hier sehen Sie ein Beispiel vom Bildschirm,
+    welchen Sie später nutzen werden um den Betrag,
+    den Sie zum Projekt dazu geben wollen, auszuwählen.
+    Sie können Ihren Beitrag verändern bis Sie auf 'Weiter' klicken.
+    
+    
+summary_1: >
+    Am Ende jedes Abschnittes werden Sie eine Zusammenfassung der Beiträge
+    und Auszahlungen jeder Person dieses Abschnittes sehen. Hier sehen
+    Sie ein Beispiel dieser Zusammenfassung.
+    
+    
+    Wenn Sie auf 'Weiter' klicken beginnt die nächste Runde. Wenn Sie nicht auf
+    'Weiter' klicken startet die nächste Runde automatisch nach 30 Sekunden.
+    
+    
+    Wir werden die Komponenten des Zusammenfassungs-Bildschirms
+    Schritt für Schritt erklären.
+
+    
+summary_2: >
+    Eine Spalte zeigt die Beiträge zum Projekt und die
+    andere Spalte zeigt die Auszahlungen.
+    
+    
+summary_3: >
+    Die mittlere Spalte zeigt an ob die Beiträge und Auszahlungen
+    Ihre oder die der Person B sind. Unter der Information zu Person
+    B sehen Sie die Summen und Durchschnitte der Beiträge und
+    Auszahlungen dieser Runde.
+
+    
+summary_4: >
+    Hier ist ein Beispiel: Stellen Sie sich vor Sie haben 10
+    Punkte zum Projekt beigesteuert und Person B ebenfalls.
+
+    
+summary_5: >
+    Die Summe der Beiträge ist dementsprechend 20 (10 + 10)
+    und der Durschnitt ist 10 (20 geteilt durch 2).
+    
+    
+summary_6: >
+    Ihre Auszahlung beträgt:
+    
+    
+    
+    
+    
+    Sie haben in dieser Runde 28 Punkte verdient.
+    
+    
+summary_7: >
+    Die Auszahlung der Person B ist:
+    
+    
+    
+    
+    
+    Person B hat in dieser Runde 28 Punkte verdient.
+    
+    
+summary_8: >
+    Auf dieser Seite zeigen wir Ihnen die Summe der Auszahlungen:
+    28+28 = 56, wie auch den Durchschnitt der Auszahlungen:
+    56 geteilt durch 2 = 28.
+    
+    
+pre_calibration_instructions: >
+    Wenn Sie Fragen haben wenden Sie sich bitte an
+    den Versuchsleiter! 
+    
+    
+    Andernfalls klicken Sie 'Weiter' und nach der
+    Kalibrierung des Eye-Trackers starten Sie mit dem Experiment.
+
+    
+detect_pupils_screen: >
+    Setzen Sie sich bequem hin und bewegen Sie Ihren Kopf
+    in eine Position, welche gewährleistet, dass Ihre Augen
+    in die Mitte des Bildschirms projeziert werden. Aktivieren
+    Sie nun den 'Weiter' Knopf indem Sie Ihre Augen  für einige
+    Sekunden in der grün makierten Region ruhen lassen. Klicken Sie
+    dann auf 'Weiter'.
+    
+    
+calibration_look: >
+    Schauen Sie auf den roten Punkt!
+    
+
+calibration_failed: >
+    Die Kalibrierung ist fehlgeschlagen. Es funktioniert
+    nicht immer nach dem ersten Mal. Bitte versuchen Sie es erneut!
+    
+    
+    Klicken Sie 'Weiter' wenn Sie bereit sind.
+
+    
+calibration_failed_again: >
+    Die Kalibrierung ist erneut fehlgeschlagen. Wir werden sicher stellen,
+    dass Ihre Augen im Bereich des Eye-Trackers sind.
+
+    
+wait: >
+    Bitte warten Sie!
+
+    
+begin_game_screen_initial: >
+    Dieser Abschnitt des Experiments hat {} Runden.
+
+
+    Klicken Sie 'Weiter' um mit dem Abschnitt zu beginnen!    
+    
+    
+begin_game_screen_subsequent: >
+    Dieser Abschnitt ist exakt wie der erste Abschnitt außer,
+    dass die Beiträge nun nicht mit 1,8 multipliziert werden
+    sondern mit {}.
+    
+    Klicken Sie 'Weiter' um mit dem Abschnitt zu beginnen!
+    
+contrib_screen: >
+    Sie tragen {} Punkte zum Projekt bei.
+
+    
+contrib_screen_wait: >
+    Bitte warten Sie bis die andere Person gewählt hat.
+    
+
+payoff_screen: >
+    Herzlichen Glückwunsch, Sie haben {} Punkte verdient!
+
+    
+final_screen : >
+    Abschnitt {game} wurde zufällig ausgewählt. In diesem Abschnitt haben
+    Sie {points} Punkte verdient. Ihr Gesamteinkommen des Experiments, inclusive
+    der Aufwandsentschädigung von 6 Euro, beträgt {cash} Euro!
+    
+    
+    Danke für Ihre Teilnahme!
+    
+    
+    Bitte geben Sie dem Versuchsleiter bescheid.
+
+
+

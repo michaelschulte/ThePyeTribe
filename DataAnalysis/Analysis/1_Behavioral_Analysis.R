@@ -18,6 +18,11 @@
 # laod cotribution data
 raw <- readRDS('../data/Contributions.RDS')
 
+ raw$id <- raw$pair_in_game
+ raw$pair_id <- gsub( "_.*$", "", raw$id)
+ raw$player_id_within_pair <- raw$player_in_round
+ raw <- subset(raw, select = c("game", "round", "contribution", "opponent_1_contrib", "payoff", "id", "pair_id", "player_id_within_pair"))
+ 
 # Models from Fischbacher & Gächter (2010)
 # All models are built under the assumption that people use two "modules": First form beliefs about the opponent and then decide how much to contribute.
 
@@ -60,53 +65,6 @@ for(i in 1:length(raw$matching_0.5_contribution)) {
                                                 w*raw$matching_0.5_contribution[i - 1] + (1 - w)*raw$opponent_1_contrib[i - 1]))
 }
 
-
-# Edit for plotting
-contribution_median <- aggregate(raw$contribution, by = list(raw$game, raw$round), median)
-colnames(contribution_median) <- c("game", "round", "contribution_median")
-pCCn_contribution_median <- aggregate(raw$pCCn_contribution, by = list(raw$game, raw$round), median)
-colnames(pCCn_contribution_median) <- c("game", "round", "pCCn_contribution_median")
-pCCa_contribution_median <- aggregate(raw$pCCa_contribution, by = list(raw$game, raw$round), median)
-colnames(pCCa_contribution_median) <- c("game", "round", "pCCa_contribution_median")
-iCCn_contribution_median <- aggregate(raw$iCCn_contribution, by = list(raw$game, raw$round), median) 
-colnames(iCCn_contribution_median) <- c("game", "round", "iCCn_contribution_median")
-iCCa_contribution_median <- aggregate(raw$iCCa_contribution, by = list(raw$game, raw$round), median)
-colnames(iCCa_contribution_median) <- c("game", "round", "iCCa_contribution_median")
-matching_0.5_contribution_median <- aggregate(raw$matching_0.5_contribution, by = list(raw$game, raw$round), median)
-colnames(matching_0.5_contribution_median) <- c("game", "round", "matching_0.5_contribution_median")
-
-# Drop "i" models
-contributions_median <- merge(contribution_median, pCCn_contribution_median)
-contributions_median <- merge(contributions_median, pCCa_contribution_median)
-contributions_median <- merge(contributions_median, matching_0.5_contribution_median)
-contributions_median <- melt(contributions_median, id = c("game", "round"))
-
-# Housekeeping 
-rm(contribution_median, pCCn_contribution_median, pCCa_contribution_median, iCCn_contribution_median, iCCa_contribution_median, matching_0.5_contribution_median)
-
-# Plot aggregate model predictions
-ggplot(contributions_median, aes(x = round, y = value, colour = variable)) + 
-  geom_line() +
-  scale_x_continuous(breaks = 1:10) + 
-  scale_colour_brewer(palette = 'Set1')  +
-  xlab('Round') +
-  ylab('Contribution') +
-  facet_grid(game ~ .) +
-  ylim(0, 20)
-
-# Plot individual matching_0.5_model predicitons
-contributions_individual <- subset(raw, game == 1) # Fix by hand
-ggplot(contributions_individual, aes(x = round, y = contribution)) + 
-  geom_line() +
-  geom_line(data = contributions_individual, aes(x = round, y = matching_0.5_contribution), col = "red") +
-  scale_x_continuous(breaks = 1:10) + 
-  scale_colour_brewer(palette = 'Set1')  +
-  xlab('Round') +
-  ylab('Contribution') +
-  facet_grid(id ~ .) +
-  ylim(0, 20) +
-  ggtitle("Matching_0.5 predictions")
-
 # Evaluation of models
 pCCn_msd <- mean((raw$contribution - raw$pCCn_contribution)^2, na.rm = TRUE)
 pCCa_msd <- mean((raw$contribution - raw$pCCa_contribution)^2, na.rm = TRUE)
@@ -146,28 +104,6 @@ res <- data.frame(t(data.frame(result)))
 res <- cbind(grid, res)
 colnames(res) <- c("id", "msd", "w")
 
-ggplot(data = res, aes(x = w)) +
-  geom_histogram() +
-  xlab("Anchor on own previous contribution (w)") +
-  theme(panel.background = element_blank()) +
-  theme(text = element_text(size = 15)) +
-  theme(legend.title = element_blank()) +
-  theme(legend.key = element_blank()) +
-  theme(legend.background = element_blank()) +
-  theme(panel.background = element_rect(colour = "grey")) +
-  ggtitle("Matching model")
-
-ggplot(data = res, aes(x = msd)) +
-  geom_histogram() +
-  #xlab("Anchor on own previous contribution (w)") +
-  theme(panel.background = element_blank()) +
-  theme(text = element_text(size = 15)) +
-  theme(legend.title = element_blank()) +
-  theme(legend.key = element_blank()) +
-  theme(legend.background = element_blank()) +
-  theme(panel.background = element_rect(colour = "grey")) +
-  ggtitle("Matching model")
-
 # Generate predictions for each individual
 fit_data <- merge(fit_data, res)
 names(fit_data)[names(fit_data) == "w"] <- "matching_w"
@@ -180,35 +116,6 @@ for(i in 1:length(fit_data$matching_contribution)) {
 }
 
 matching_msd <- mean((fit_data$contribution - fit_data$matching_contribution)^2, na.rm = TRUE)
-
-# Plot individual matching model predicitons
-ggplot(fit_data, aes(x = round, y = contribution)) + 
-  geom_line() +
-  geom_line(data = fit_data, aes(x = round, y = matching_contribution), col = "red") +
-  scale_x_continuous(breaks = 1:10) + 
-  scale_colour_brewer(palette = 'Set1')  +
-  xlab('Round') +
-  ylab('Contribution') +
-  facet_grid(id ~ .) +
-  ylim(0, 20) +
-  ggtitle("Matching model predictions")
-
-# Plot aggregate model predictions including fitted matching model
-matching_contribution_median <- aggregate(fit_data$matching_contribution, by = list(fit_data$game, fit_data$round), median)
-colnames(matching_contribution_median) <- c("game", "round", "matching_contribution_median")
-contributions_median <- subset(contributions_median, game == 1)
-matching_contribution_median <- melt(matching_contribution_median, id = c("game", "round"))
-contributions_median <- rbind(contributions_median, matching_contribution_median)
-
-ggplot(contributions_median, aes(x = round, y = value, colour = variable)) + 
-  geom_line() +
-  scale_x_continuous(breaks = 1:10) + 
-  scale_colour_brewer(palette = 'Set1')  +
-  xlab('Round') +
-  ylab('Contribution') +
-  #facet_grid(game ~ .) +
-  ylim(0, 20)
-
 
 # Load distribution of attention
 load("/Volumes/LejarragaTomas/Eye games/0_PilotExperiment/1_Analysis/data/ET50_allAOIs.Rdata")
@@ -274,6 +181,7 @@ colnames(attention) <- c("pair_id", "round", "ra_1", "ra_2")
 attention$diff_ra <- attention$ra_1 - attention$ra_2
 
 # Calculate difference in contributions
+contributions_individual <- subset(raw, game == 1) # Fix by hand
 contributions <- subset(contributions_individual, select = c("game", "round", "pair_id", "player_id_within_pair", "contribution"))
 contributions <- dcast(contributions, pair_id + round ~ player_id_within_pair, value.var="contribution")
 colnames(contributions) <- c("pair_id", "round", "contribution_1", "contribution_2")

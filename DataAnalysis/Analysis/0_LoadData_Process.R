@@ -6,7 +6,7 @@
 rm(list = ls())
 
 # change your working directory path to the folder of this file!! 
-setwd('~/Dropbox (2.0)/9_AbschgeschlosseneProjekte/EyeGamessubmission_BRM/GithubRepo/Analysis')
+setwd('XXX/Analysis')
 
 # some libraries we might need
 require(dplyr)
